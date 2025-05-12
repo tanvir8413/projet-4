@@ -1,0 +1,280 @@
+/* Home Page Specific Styles */
+
+/* Hero Section */
+.hero {
+  height: 85vh;
+  min-height: 600px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url('https://cdn.pixabay.com/photo/2017/01/17/03/57/desktop-1985856_960_720.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--color-white);
+  margin-top: 80px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin-left: 10%;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Featured Products */
+.featured {
+  padding: var(--spacing-xxl) var(--spacing-md);
+  text-align: center;
+}
+
+.featured h2 {
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+  display: inline-block;
+}
+
+.featured h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+  padding-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  height: 240px;
+  background-color: var(--color-secondary-light);
+  margin-bottom: var(--spacing-md);
+  background-size: cover;
+  background-position: center;
+  transition: all var(--transition-medium);
+}
+
+.product-card:nth-child(1) .product-image {
+  background-image: url('https://images.pexels.com/photos/7354752/pexels-photo-7354752.jpeg?auto=compress&cs=tinysrgb&w=1600');
+}
+
+.product-card:nth-child(2) .product-image {
+  background-image: url('https://images.pexels.com/photos/6044057/pexels-photo-6044057.jpeg?auto=compress&cs=tinysrgb&w=1600');
+}
+
+.product-card:nth-child(3) .product-image {
+  background-image: url('https://images.pexels.com/photos/4207709/pexels-photo-4207709.jpeg?auto=compress&cs=tinysrgb&w=1600');
+}
+
+.product-card:nth-child(4) .product-image {
+  background-image: url('https://images.pexels.com/photos/4226869/pexels-photo-4226869.jpeg?auto=compress&cs=tinysrgb&w=1600');
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-xs);
+  padding: 0 var(--spacing-md);
+}
+
+.product-card p {
+  color: var(--color-gray);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-xs);
+  padding: 0 var(--spacing-md);
+}
+
+.product-card .price {
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Categories Section */
+.categories {
+  background-color: var(--color-secondary-light);
+  padding: var(--spacing-xxl) var(--spacing-md);
+  text-align: center;
+}
+
+.categories h2 {
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+  display: inline-block;
+}
+
+.categories h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.category-card {
+  position: relative;
+  height: 300px;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-medium);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transition: transform var(--transition-medium);
+}
+
+.category-card:hover .category-image {
+  transform: scale(1.1);
+}
+
+.category-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+}
+
+.category-image.notebooks {
+  background-image: url('https://images.pexels.com/photos/6157224/pexels-photo-6157224.jpeg?auto=compress&cs=tinysrgb&w=1600');
+}
+
+.category-image.pens {
+  background-image: url('https://images.pexels.com/photos/4207791/pexels-photo-4207791.jpeg?auto=compress&cs=tinysrgb&w=1600');
+}
+
+.category-image.desk {
+  background-image: url('https://images.pexels.com/photos/5797908/pexels-photo-5797908.jpeg?auto=compress&cs=tinysrgb&w=1600');
+}
+
+.category-image.paper {
+  background-image: url('https://images.pexels.com/photos/4207940/pexels-photo-4207940.jpeg?auto=compress&cs=tinysrgb&w=1600');
+}
+
+.category-card h3 {
+  padding: var(--spacing-md);
+  font-size: 1.3rem;
+  font-weight: 600;
+  z-index: 1;
+  margin-bottom: var(--spacing-md);
+  transition: transform var(--transition-medium);
+}
+
+.category-card:hover h3 {
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .product-grid, .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 70px;
+    height: 70vh;
+  }
+  
+  .hero-content {
+    margin-left: 5%;
+    max-width: 80%;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid, .category-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero {
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    margin-left: 0;
+    padding: 0 var(--spacing-md);
+  }
+}
