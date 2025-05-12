@@ -257,7 +257,8 @@ footer {
   gap: var(--spacing-lg);
   max-width: 1400px;
   margin: 0 auto;
-  margin-right: 100px;
+  
+  
 }
 
 .footer-column h3 {
